@@ -1,12 +1,11 @@
-FROM fedora:latest
+FROM theteamultroid/ultroid:main
 
-RUN dnf upgrade -y
-RUN dnf install \
-  https://download1.rpmfusion.org/free/fedora/rpmfusion-free-release-$(rpm -E %fedora).noarch.rpm -y
-RUN dnf install gcc python3-devel  git python3-pip ffmpeg megatools -y
-RUN pip3 install -U pip
-RUN mkdir /app/
-WORKDIR /app/
-RUN git clone https://github.com/Itz-fork/Mega.nz-Bot.git /app
-RUN pip3 install -U -r requirements.txt
-CMD ["python3", "-m", "megadl"]
+ENV TZ=Asia/Kolkata
+RUN ln -snf /usr/share/zoneinfo/$TZ /etc/localtime && echo $TZ > /etc/timezone
+
+COPY installer.sh .
+RUN bash installer.sh
+
+WORKDIR "/root/TeamUltroid"
+
+CMD ["bash", "startup"]

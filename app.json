@@ -1,7 +1,7 @@
 {
-    "name": "Mega-Deployer",
-    "description": "Deploy the original Mega.nz-Bot",
-    "logo": "https://github.com/Itz-fork/Mega.nz-Bot/blob/nightly/assests/logo.png?raw=true",
+    "name": "Mega-Doyer",
+    "description": "De the original Mega.nz-Bot",
+    "logo": "https://github.com/Itz-fork/Mega.nz/blob/nightly/assests/logo.png?raw=true",
     "keywords": [
       "Telegram Bot",
       "Mega.nz",
@@ -9,9 +9,9 @@
       "File Transfer",
       "Deployment"
     ],
-    "website": "https://t.me/NexaBotsUpdates",
-    "repository": "https://github.com/Itz-fork/X-Bin-Patch",
-    "success_url": "https://t.me/NexaBotsUpdates",
+    "website": "https://t.me/NeotsUpdates",
+    "repository": "https://github.com/IBin-Patch",
+    "success_url": "https://t.me/NexaBopdates",
     "env": {
       "APP_ID": {
         "description": "Your unique Telegram APP ID, obtained from my.telegram.org",

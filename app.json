@@ -1,80 +1,56 @@
 {
-    "name": "Mega-Doyer",
-    "description": "De the original Mega.nz-Bot",
-    "logo": "https://github.com/Itz-fork/Mega.nz/blob/nightly/assests/logo.png?raw=true",
+    "name": "rBot",
+    "description": "Pluggyhon using Telethon.",
+    "logo": "https://graph.org/file/4f6a5191040.jpg",
     "keywords": [
-      "Telegram Bot",
-      "Mega.nz",
-      "Cloud Storage",
-      "File Transfer",
-      "Deployment"
+        "Telethon",
+        "telegram",
+        "userbot",
+        "python",
+        "ultroid"
     ],
-    "website": "https://t.me/NeotsUpdates",
-    "repository": "https://github.com/IBin-Patch",
-    "success_url": "https://t.me/NexaBopdates",
+    "repository": ltroid",
+    "website": "https://ultrh",
+    "success_url": "https://t.me/Tetroid",
+    "stack": "container",
     "env": {
-      "APP_ID": {
-        "description": "Your unique Telegram APP ID, obtained from my.telegram.org",
-        "required": true
-      },
-      "API_HASH": {
-        "description": "Your Telegram API HASH, also acquired from my.telegram.org",
-        "required": true
-      },
-      "BOT_TOKEN": {
-        "description": "Your bot token. Obtain it from @BotFather on Telegram",
-        "required": true
-      },
-      "AUTH_USERS": {
-        "description": "A list of Telegram user IDs who are authorized to interact with your bot. Keep control over who can use its features. Separate IDs with spaces. For details, visit https://megabot.hirusha.codes/config-vars",
-        "required": true,
-        "value": "*"
-      },
-      "MONGO_URI": {
-        "description": "Optional: The connection string to your MongoDB database, if you wish to use multi-user feature",
-        "required": false
-      },
-      "LOG_CHAT": {
-        "description": "Optional: The chat ID where you want to receive user activity logs. Ensure the bot has admin privileges in this chat.",
-        "required": false
-      },
-      "MEGA_EMAIL": {
-        "description": "Optional: Your Mega account email address. Use this to associate the bot with a specific Mega account for private deployments.",
-        "required": false
-      },
-      "MEGA_PASSWORD": {
-        "description": "Optional: The password for your Mega account specified in MEGA_EMAIL.",
-        "required": false
-      },
-      "USE_ENV": {
-        "description": "Set this to 'true' if you're running a private bot with a single Mega account using MEGA_EMAIL and MEGA_PASSWORD.",
-        "required": false,
-        "value": "false"
-      },
-      "TG_MAX_SIZE": {
-        "description": "Optional: Customize the maximum file size (in bytes) that users can upload to Telegram through your bot. Defaults to Telegram's limit of 2GB.",
-        "required": false,
-        "value": "2040108421"
-      },
-      "CYPHER_KEY": {
-        "description": "A unique key for encrypting user email and password data in the database. It's highly recommended to generate a new key for security. For guidance, see https://megabot.hirusha.codes/config-vars",
-        "required": true,
-        "value": "rjthz12go4udR8CkoTLI0L8pk418PCBFT7KP8EuDIKM="
-      },
-      "CHUNK_SIZE": {
-        "description": "Optional: Adjust the amount of data (in bytes) that the bot reads into memory when downloading files from direct download links. This can impact performance and memory usage.",
-        "required": false,
-        "value": "524288"
-      }
+        "API_ID": {
+            "description": "You api id, from my.telegram.org or @ScrapperRoBot.",
+            "value": "", 
+            "required": false
+        },
+        "API_HASH": {
+            "description": "You api hash, from my.telegram.org or @ScrapperRoBot.",
+            "value": "",
+            "required": false
+        },
+        "SESSION": {
+            "description": "Session String (telethon or pyrogram) for your telegram user account. The userbot will NOT work without a session string!!",
+            "value": ""
+        },
+        "REDIS_URI": {
+            "description": "Redis endpoint URL, from redislabs.com",
+            "value": ""
+        },
+        "REDIS_PASSWORD": {
+            "description": "Redis endpoint password, from redislabs.com",
+            "value": ""
+        },
+        "HEROKU_API": {
+            "description": "Heroku API token. Mandatory for Heroku Deploy...",
+            "value": "",
+            "required": false
+        },
+        "HEROKU_APP_NAME": {
+            "description": "Name of your Heroku app, given in the first blank on this page. To be added if deploying to heroku ONLY.",
+            "value": "",
+            "required": false
+        }
     },
-    "addons": [],
-    "buildpacks": [],
     "formation": {
-      "worker": {
-        "quantity": 1,
-        "size": "eco"
-      }
-    },
-    "stack": "container"
-  }
-  
+        "ultroid": {
+            "quantity": 1,
+            "size": "eco"
+        }
+    }
+}
